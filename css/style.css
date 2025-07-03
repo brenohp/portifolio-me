@@ -1,0 +1,255 @@
+/* --- GERAL E VARIÁVEIS --- */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Source+Code+Pro:wght@600&display=swap');
+
+:root {
+    --bg-color: #121212;
+    --surface-color: #1e1e1e;
+    --primary-color: #00aaff;
+    --text-color: #e0e0e0;
+    --text-secondary-color: #a0a0a0;
+    --border-color: #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Alteração 5: Ajuste para o Footer ficar no final da página */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1; /* Faz o conteúdo principal crescer e empurrar o footer para baixo */
+}
+
+/* --- CABEÇALHO E NAVEGAÇÃO --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: var(--surface-color);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-logo {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--primary-color);
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: var(--text-color);
+    transition: all 0.3s ease-in-out;
+}
+
+/* --- CONTEÚDO PRINCIPAL --- */
+.main-content {
+    max-width: 1000px;
+    width: 90%; /* Adicionado para melhor responsividade em telas menores */
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content {
+    width: 100%;
+}
+
+.hero-avatar {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 1.5rem;
+}
+
+.main-content h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    color: var(--text-color); /* Cor padrão do texto */
+    margin-bottom: 1.5rem;
+    min-height: 2.25rem; /* Evita que o layout "pule" enquanto o texto digita */
+}
+
+/* Alteração 1: Cor de destaque apenas no span */
+.hero-subtitle .highlight {
+    color: var(--primary-color);
+    font-weight: bold;
+    font-family: 'Source Code Pro', monospace;
+}
+
+.content-section {
+    background-color: var(--surface-color);
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 2rem; /* Espaço entre a bio e o conteúdo acima */
+    border: 1px solid var(--border-color);
+    text-align: left; /* Alinha o texto da bio à esquerda */
+    width: 100%;
+}
+
+.content-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-family: 'Source Code Pro', monospace;
+    text-align: center; /* Centraliza o H2 "Sobre Mim" */
+}
+
+/* Novo container para ícones e botão */
+.actions-container {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.social-links a {
+    color: var(--text-secondary-color);
+    font-size: 2rem;
+    margin: 0 1rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+    transform: translateY(-5px);
+}
+
+.cta-button {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #008fcc;
+    transform: scale(1.05);
+}
+
+/* ... (O resto do seu CSS para outras páginas, como .skills-grid, .projects-grid, .contact-form, pode permanecer o mesmo) ... */
+
+/* Estilos que você já tinha para outras páginas */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+.skill-card {
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.skill-card:hover { transform: translateY(-5px); box-shadow: 0 4px 20px rgba(0, 170, 255, 0.1); }
+.skill-card i { font-size: 3rem; margin-bottom: 0.5rem; color: var(--primary-color); }
+.devicon-nextjs-original-wordmark.colored { color: #fff; }
+.skill-card span { font-size: 0.9rem; font-weight: bold; }
+.projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+.project-card { background-color: var(--bg-color); border: 1px solid var(--border-color); border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.project-card:hover { transform: translateY(-5px); box-shadow: 0 4px 20px rgba(0, 170, 255, 0.1); }
+.project-card img { width: 100%; height: auto; object-fit: cover; }
+.project-info { padding: 1rem; flex-grow: 1; display: flex; flex-direction: column; }
+.project-info h3 { color: var(--primary-color); margin-bottom: 0.5rem; }
+.project-info p { color: var(--text-secondary-color); flex-grow: 1; margin-bottom: 1rem; }
+.project-link { color: var(--primary-color); text-decoration: none; font-weight: bold; align-self: flex-start; }
+.project-link:hover { text-decoration: underline; }
+.contact-form { display: flex; flex-direction: column; gap: 1rem; }
+.form-group { display: flex; flex-direction: column; }
+.form-group label { margin-bottom: 0.5rem; color: var(--text-secondary-color); }
+.form-group input, .form-group textarea { background-color: var(--bg-color); border: 1px solid var(--border-color); border-radius: 5px; padding: 10px; color: var(--text-color); font-size: 1rem; }
+.form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--primary-color); }
+.error-message { color: #ff6b6b; font-size: 0.8rem; margin-top: 5px; min-height: 1.2em; }
+.success-message { display: none; color: #51cf66; background-color: rgba(81, 207, 102, 0.1); border: 1px solid #51cf66; padding: 1rem; border-radius: 5px; margin-top: 1rem; text-align: center; }
+
+/* --- FOOTER --- */
+.footer {
+    text-align: center;
+    padding: 2rem 5%;
+    margin-top: auto; /* Garante que ele fique no final do flex container */
+    border-top: 1px solid var(--border-color);
+    color: var(--text-secondary-color);
+    width: 100%;
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 768px) {
+    .main-content h1 { font-size: 2.5rem; }
+    .hero-subtitle { font-size: 1.2rem; }
+    .nav-menu { position: fixed; left: -100%; top: 65px; flex-direction: column; background-color: var(--surface-color); width: 100%; text-align: center; transition: 0.3s; gap: 0; }
+    .nav-menu.active { left: 0; }
+    .nav-item { padding: 1.5rem 0; border-bottom: 1px solid var(--border-color); }
+    .hamburger { display: block; }
+    .hamburger.active .bar:nth-child(2) { opacity: 0; }
+    .hamburger.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .hamburger.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+}
+
+@media (min-width: 992px) {
+    .skills-grid {
+        /* Força a grade a ter exatamente 5 colunas iguais */
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
