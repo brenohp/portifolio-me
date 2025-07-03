@@ -20,7 +20,7 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Alteração 5: Ajuste para o Footer ficar no final da página */
+/* CORPO*/
 body {
     font-family: 'Roboto', sans-serif;
     background-color: var(--bg-color);
@@ -90,7 +90,7 @@ main {
 /* --- CONTEÚDO PRINCIPAL --- */
 .main-content {
     max-width: 1000px;
-    width: 90%; /* Adicionado para melhor responsividade em telas menores */
+    width: 90%; 
     margin: 2rem auto;
     display: flex;
     flex-direction: column;
@@ -117,10 +117,10 @@ main {
     font-size: 1.5rem;
     color: var(--text-color); /* Cor padrão do texto */
     margin-bottom: 1.5rem;
-    min-height: 2.25rem; /* Evita que o layout "pule" enquanto o texto digita */
+    min-height: 2.25rem; 
 }
 
-/* Alteração 1: Cor de destaque apenas no span */
+
 .hero-subtitle .highlight {
     color: var(--primary-color);
     font-weight: bold;
@@ -131,9 +131,9 @@ main {
     background-color: var(--surface-color);
     padding: 2rem;
     border-radius: 8px;
-    margin-top: 2rem; /* Espaço entre a bio e o conteúdo acima */
+    margin-top: 2rem; 
     border: 1px solid var(--border-color);
-    text-align: left; /* Alinha o texto da bio à esquerda */
+    text-align: left; 
     width: 100%;
 }
 
@@ -141,7 +141,7 @@ main {
     color: var(--primary-color);
     margin-bottom: 1rem;
     font-family: 'Source Code Pro', monospace;
-    text-align: center; /* Centraliza o H2 "Sobre Mim" */
+    text-align: center; 
 }
 
 /* Novo container para ícones e botão */
@@ -180,9 +180,6 @@ main {
     transform: scale(1.05);
 }
 
-/* ... (O resto do seu CSS para outras páginas, como .skills-grid, .projects-grid, .contact-form, pode permanecer o mesmo) ... */
-
-/* Estilos que você já tinha para outras páginas */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
@@ -226,7 +223,7 @@ main {
 .footer {
     text-align: center;
     padding: 2rem 5%;
-    margin-top: auto; /* Garante que ele fique no final do flex container */
+    margin-top: auto; 
     border-top: 1px solid var(--border-color);
     color: var(--text-secondary-color);
     width: 100%;
@@ -248,7 +245,6 @@ main {
 
 @media (min-width: 992px) {
     .skills-grid {
-        /* Força a grade a ter exatamente 5 colunas iguais */
         grid-template-columns: repeat(5, 1fr);
     }
 }

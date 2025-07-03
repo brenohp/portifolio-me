@@ -16,24 +16,24 @@ document.addEventListener('DOMContentLoaded', function() {
         }));
     }
 
-    // --- EFEITO 2: EFEITO DE DIGITAÇÃO NA PÁGINA INICIAL (Alteração 1) ---
+    // --- EFEITO 2: EFEITO DE DIGITAÇÃO NA PÁGINA INICIAL  ---
     const typingEffectElement = document.getElementById('typing-effect');
     if (typingEffectElement) {
-        // Agora o script digita apenas a parte que vai no span
+        
         const text = "Desenvolvedor Full-Stack!"; 
         let index = 0;
-        typingEffectElement.innerHTML = ''; // Garante que o span comece vazio
+        typingEffectElement.innerHTML = ''; 
         function type() {
             if (index < text.length) {
                 typingEffectElement.innerHTML += text.charAt(index);
                 index++;
-                setTimeout(type, 100); // Velocidade da digitação
+                setTimeout(type, 100); 
             }
         }
         type();
     }
 
-    // --- VALIDAÇÃO DO FORMULÁRIO DE CONTATO (Sem alterações) ---
+    // --- VALIDAÇÃO DO FORMULÁRIO DE CONTATO  ---
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', function(event) {
